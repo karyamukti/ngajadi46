@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Formulir Lomba Video</title>
+  <link rel="shortcut icon" href="favicon.png" />
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 1rem;
+      max-width: 600px;
+      margin: auto;
+      background: #f9f9f9;
+    }
+    h2 {
+      text-align: center;
+      color: #006400;
+    }
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 1rem;
+    }
+    input, textarea, select {
+      width: 100%;
+      padding: 0.6rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      margin-top: 0.3rem;
+      box-sizing: border-box;
+    }
+    textarea {
+      resize: vertical;
+    }
+    label input[type="checkbox"] {
+      margin-right: 0.5rem;
+    }
+    .persetujuan {
+      margin-top: 1rem;
+      font-weight: normal;
+      line-height: 1.5;
+    }
+    
+    button {
+      margin-top: 1.5rem;
+      width: 100%;
+      background-color: #007a33;
+      color: white;
+      border: none;
+      padding: 0.8rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f25;
+    }
+    small {
+      font-size: 0.85rem;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Formulir Lomba Video Antar Warga</h2>
+
+  <form id="lombaForm">
+    <label for="nama">Nama Lengkap:</label>
+    <input type="text" id="nama" required>
+
+    <label for="alamat">Alamat / RT RW:</label>
+    <input type="text" id="alamat" required>
+
+    <label for="wa">No. WhatsApp:</label>
+    <input type="text" id="wa" required>
+
+    <label for="judul">Judul Video:</label>
+    <input type="text" id="judul" required>
+
+    <label for="deskripsi">Deskripsi Singkat Video:</label>
+    <textarea id="deskripsi" rows="3"></textarea>
+
+    <label for="link">Link G-Drive Video (Opsional):</label>
+    <input type="url" id="link" placeholder="https://drive.google.com/..." />
+    <small>*Jika belum upload, bisa kirim langsung ke WhatsApp panitia</small>
+
+    <label for="kategori">Perwakilan dari:</label>
+    <select id="kategori" required>
+    <option value="" disabled selected>Pilih RW</option>
+    <option value="RW 01">RW 01</option>
+    <option value="RW 02">RW 02</option>
+    <option value="RW 03">RW 03</option>
+    <option value="RW 04">RW 04</option>
+    <option value="RW 05">RW 05</option>
+     <option value="RW 06">RW 06</option>
+    </select>
+
+    <label class="persetujuan">
+      <input type="checkbox" id="setuju" required>
+      Saya menyatakan video ini adalah karya saya dan bersedia digunakan untuk keperluan dokumentasi lomba.
+    </label>
+
+    <button type="submit">Kirim via WhatsApp</button>
+  </form>
+
+  <script>
+    document.getElementById("lombaForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+
+      const nama = document.getElementById("nama").value;
+      const alamat = document.getElementById("alamat").value;
+      const wa = document.getElementById("wa").value;
+      const judul = document.getElementById("judul").value;
+      const deskripsi = document.getElementById("deskripsi").value;
+      const link = document.getElementById("link").value;
+      const kategori = document.getElementById("kategori").value;
+
+      const pesan = `*Pendaftaran Lomba Video*\n\n` +
+        `👤 Nama: ${nama}\n🏠 Alamat: ${alamat}\n📱 WA: ${wa}\n🎬 Judul: ${judul}\n📝 Deskripsi: ${deskripsi}\n🔗 Link GDrive: ${link || '(dikirim manual)'}\n👥 Perwakilan: ${kategori}`;
+
+      const nomorAdmin = '6281234567890'; // Ganti dengan nomor WA panitia
+      const url = `https://wa.me/${nomorAdmin}?text=${encodeURIComponent(pesan)}`;
+
+      window.open(url, '_blank');
+    });
+  </script>
+
+</body>
+</html>
