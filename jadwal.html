@@ -112,6 +112,11 @@
         max-width: 250px;
       }
     }
+    .table-container {
+     width: 100%;
+     overflow-x: auto;
+     -webkit-overflow-scrolling: touch;
+    }
   </style>
 </head>
 <body>
@@ -130,7 +135,8 @@
 
     <div class="pdf-header">📆 Jadwal Kegiatan Hari Jadi Desa</div>
 
-    <table id="jadwalTable">
+<div class="table-container">
+  <table id="jadwalTable">
       <thead>
         <tr>
           <th>No</th>
@@ -181,6 +187,7 @@
         </tr>
       </tbody>
     </table>
+  </div>
   </div>
 
   <script>
