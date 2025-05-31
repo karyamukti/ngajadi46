@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Juara Kreasi Video</title>
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css"/>
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .swiper {
+      height: 100vh;
+    }
+
+    .swiper-slide {
+      position: relative;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.4); /* semi-gelap agar teks terbaca */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+      text-align: center;
+      color: #fff;
+    }
+
+    .judul {
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      color: #ffe600;
+    }
+
+    .pemenang {
+      font-size: 2.2rem;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .kategori {
+      font-size: 1.1rem;
+    }
+
+    .swiper-pagination-bullet {
+      background: #fff;
+      opacity: 0.4;
+    }
+
+    .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+
+    @media (min-width: 600px) {
+      .pemenang { font-size: 2.8rem; }
+      .kategori { font-size: 1.2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Swiper Container -->
+  <div class="swiper">
+    <div class="swiper-wrapper">
+
+      <!-- Slide Juara 1 -->
+      <div class="swiper-slide" style="background-image: url('juara1.png');">
+        <div class="overlay">
+          <div class="judul">🎖️ Juara 1</div>
+          <div class="pemenang">RW A</div>
+          <div class="kategori"><u>Kreasi Video Antar RW</u><br/>Like Facebook: 200<br/>Like Tiktok: 200<br/>Like Youtube: 200<br/><b>Total Like: 600</b></div>
+        </div>
+      </div>
+
+      <!-- Slide Juara 2 -->
+      <div class="swiper-slide" style="background-image: url('juara2.png');">
+        <div class="overlay">
+          <div class="judul">🏅 Juara 2</div>
+          <div class="pemenang">RW B</div>
+          <div class="kategori"><u>Kreasi Video Antar RW</u><br/>Like Facebook: 100<br/>Like Tiktok: 100<br/>Like Youtube: 100<br/><b>Total Like: 300</b></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Pagination -->
+    <div class="swiper-pagination"></div>
+  </div>
+
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.swiper', {
+      direction: 'horizontal',
+      loop: false,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      autoplay: {
+        delay: 5000, // 5 detik
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true,
+      },
+    });
+
+    // Pause saat disentuh (untuk mobile)
+    const swiperEl = document.querySelector('.swiper');
+    swiperEl.addEventListener('touchstart', () => {
+      swiper.autoplay.stop();
+    });
+    swiperEl.addEventListener('touchend', () => {
+      swiper.autoplay.start();
+    });
+  </script>
+
+</body>
+</html>
