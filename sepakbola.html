@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jadwal Pertandingan Sepakbola U15 RW</title>
+  <link rel="shortcut icon" href="favicon.png" />
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f0f4f8;
+    }
+    h1, h2 {
+      text-align: center;
+    }
+    .group, .schedule, .knockout, .standings, .rules, .awards {
+      background: white;
+      border-radius: 12px;
+      padding: 20px;
+      margin: 20px auto;
+      max-width: 700px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+      min-width: 600px;
+    }
+    th, td {
+      padding: 10px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+    .highlight {
+      background-color: #dfefff;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+      text-align: left;
+    }
+    @media (max-width: 700px) {
+      table {
+        font-size: 14px;
+        min-width: unset;
+      }
+      th, td {
+        padding: 8px;
+      }
+      ul {
+        font-size: 14px;
+        padding-left: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>Turnamen Sepakbola U15 Antar RW</h1>
+
+  <div class="group">
+    <h2>Grup</h2>
+    <table>
+      <tr><th>Grup A</th><th class="highlight">Grup B</th></tr>
+      <tr><td>RW 01</td><td class="highlight">RW 04</td></tr>
+      <tr><td>RW 05</td><td class="highlight">RW 03</td></tr>
+      <tr><td>RW 06</td><td class="highlight">RW 02</td></tr>
+    </table>
+  </div>
+
+  <div class="schedule">
+    <h2>Jadwal Pertandingan Grup</h2>
+    <table>
+      <tr><th>Grup</th><th>Pertandingan</th><th>Waktu</th></tr>
+      <tr><td>A</td><td>RW 01 vs RW 05</td><td>Senin, 16 Juni</td></tr>
+      <tr class="highlight"><td>B</td><td>RW 04 vs RW 03</td><td>Selasa, 17 Juni</td></tr>
+      <tr><td>A</td><td>RW 05 vs RW 06</td><td>Rabu, 18 Juni</td></tr>
+      <tr class="highlight"><td>B</td><td>RW 03 vs RW 02</td><td>Kamis, 19 Juni</td></tr>
+      <tr><td>A</td><td>RW 06 vs RW 01</td><td>Jum'at, 20 Juni</td></tr>
+      <tr class="highlight"><td>B</td><td>RW 02 vs RW 04</td><td>Sabtu, 21 Juni</td></tr>
+    </table>
+  </div>
+
+
+  <div class="standings">
+    <h2>Klasemen Grup A</h2>
+    <table>
+      <tr><th>Tim</th><th>Main</th><th>Menang</th><th>Seri</th><th>Kalah</th><th>GM</th><th>GK</th><th>Selisih</th><th>Poin</th></tr>
+      <tr><td>RW 01</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>RW 05</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>RW 06</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    </table>
+  </div>
+
+  <div class="standings">
+    <h2>Klasemen Grup B</h2>
+    <table>
+      <tr><th>Tim</th><th>Main</th><th>Menang</th><th>Seri</th><th>Kalah</th><th>GM</th><th>GK</th><th>Selisih</th><th>Poin</th></tr>
+      <tr><td>RW 04</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>RW 03</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+      <tr><td>RW 02</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+    </table>
+  </div>
+
+  <div class="knockout">
+    <h2>Semi Final</h2>
+    <table>
+      <tr><th>Tahap</th><th>Pertandingan</th><th>Waktu</th></tr>
+      <tr><td>Semi Final 1</td><td>Juara Grup A vs Runner-up Grup B</td><td>Minggu, 22 Juni</td></tr>
+      <tr><td>Semi Final 2</td><td>Juara Grup B vs Runner-up Grup A</td><td>Senin, 23 Juni</td></tr>
+    </table>
+  </div>
+
+  <div class="knockout">
+    <h2>Final</h2>
+    <table>
+      <tr><th>Tahap</th><th>Pertandingan</th><th>Waktu</th></tr>
+      <tr class="highlight"><td>Final</td><td>Pemenang SF1 vs Pemenang SF2</td><td>Rabu, 25 Juni</td></tr>
+    </table>
+  </div>
+
+  <div class="rules">
+    <h2>Aturan Pertandingan</h2>
+    <ul>
+      <li>Usia pemain maksimal U-15 (Kelahiran Tahun 2010 atau Setelahnya <b>dibuktikan dengan KK / KIA</b>).</li>
+      <li>Jumlah pemain: 8 orang termasuk kiper.</li>
+      <li>Susunan pemain maksimal 18 orang per tim.</li>
+      <li>Waktu pertandingan: 2 x 30 menit.</li>
+      <li>Pergantian pemain bebas, namun pemain yang sudah diganti tidak bisa bermain lagi dalam pertandingan tersebut.</li>
+      <li>Wajib memakai sepatu (jenis bebas) dan lakop (pelindung kaki).</li>
+      <li>Setiap tim memakai kaos tim dengan nomor punggung.</li>
+      <li>Pemain yang mendapatkan kartu merah tidak boleh bermain 1 pertandingan berikutnya.</li>
+      <li>Pemain yang mendapatkan 2 kartu kuning (akumulasi) tidak boleh bermain 1 pertandingan berikutnya.</li>
+    </ul>
+        <h2>Jumlah Poin yang didapat</h2>
+    <ul>
+        <li>"Menang" mendapatkan 3 Poin</li>
+        <li>"Seri" mendapatkan 1 Poin</li>
+        <li>"Kalah" mendapatkan 0 Poin</li>
+    </ul>
+        <h2>Klasemen Ditentukan Berdasarkan Urutan Berikut:</h2>
+    <ul>
+        <li>1. Jumlah Poin Tertinggi</li>
+        <li>2. Selisih Gol (Jumlah Gol Memasukkan – Gol Kemasukan)</li>
+        <li>3. Jumlah Gol Memasukkan</li>
+        <li>4. Head-to-Head (hasil pertemuan langsung antar tim dengan poin sama)</li>
+        <li>5. Fair Play (jumlah kartu kuning/merah)</li>
+        <li>6. Undian / Drawing (jika semua kriteria sama)</li>
+    </ul>
+  </div>
+
+  <div class="awards">
+    <h2>Penghargaan & Hadiah</h2>
+    <ul>
+      <li>Top Skor: Tropi</li>
+      <li>Pemain Terbaik: Tropi</li>
+      <li>Kiper Terbaik: Tropi</li>
+    </ul>
+    <br/>
+    <ul>
+      <li>Juara 1: Uang Pembinaan & Tropi</li>
+      <li>Juara 2: Uang Pembinaan & Tropi</li>
+      <li>Juara 3/4 (Juara Bersama): Uang Pembinaan & Tropi</li>
+    </ul>
+  </div>
+
+</body>
+</html>
